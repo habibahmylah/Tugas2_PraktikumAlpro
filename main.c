@@ -1,6 +1,6 @@
-// Nama File : TunjAnak.c
-// Deskripsi : menghitung tunjangan anak berdasarkan jumlah anak dan gaji pokok
-// Nama : Habibah Mylah Dalialh
+// Nama File : UpahKerja.c
+// Desripsi : menghitung upah kerja berdasarkan lamanya jam kerja perminggu
+// Nama : Habibah Mylah Dalilah
 // NIM : 24060121120028
 // Kelas : Informatika B
 
@@ -10,22 +10,22 @@
 int main()
 {
     //Kamus
-    float a,g,T;
+    int j,g,Up;
 
     //Algoritma
-    printf("Program Tunjangan Anak \n");
-    printf("Jumlah Anak : ");
-    scanf("%f", &a);
-    printf("Gaji Pokok : ");
-    scanf("%f", &g);
+    printf("Program Upah Kerja \n");
+    printf("Jam kerja perminggu : ");
+    scanf("%d", &j);
+    printf("Golongan : ");
+    scanf("%d", &g);
 
-    if (a>=3) {
-        T = 3 * (0.1 * g);
-        printf("Tunjangan Anak : %.2f", T);
+    if (j < 40) {
+        Up = j * (1000 + (j-2) * 500);
+        printf("Upah Kerja Sebesar : %d", Up);
     }
     else {
-        T = a * (0.1 * g);
-        printf("Tunjangan Anak : %.2f", T);
+        Up = j * (1000 + (j-2) * 500) * 40 + ((j-40)*(1000 + (g-1) * 500));
+        printf("Upah Kerja Sebesar : %d", Up);
     }
     return 0;
 }
